@@ -7,6 +7,10 @@ public class Cars {
 
     private final List<Car> cars = new ArrayList<>();
 
+    public List<Car> getCars() {
+        return cars;
+    }
+
     public void setCars(String[] carNames) {
         for (String carName : carNames) {
             cars.add(readyCar(carName));
@@ -16,5 +20,16 @@ public class Cars {
     private Car readyCar(String carName) {
         Name name = new Name(carName);
         return new Car(name);
+    }
+
+    public void racing() {
+        this.cars.forEach(Car::racingCar);
+    }
+
+    public int findMaxDistance() {
+        return this.cars.stream()
+                .mapToInt(Car::getDistance)
+                .max()
+                .getAsInt();
     }
 }
