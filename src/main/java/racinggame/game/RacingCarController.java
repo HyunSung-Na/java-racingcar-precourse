@@ -9,7 +9,7 @@ public class RacingCarController {
     private final String PLAY_ROUND_USER_INPUT_MESSAGE = "시도할 회수는 몇회인가요?";
     private final String WRONG_INPUT_NUMBER_MESSAGE = "[ERROR]시도할 회수를 다시 입력해주세요.";
 
-    private RacingTrack racingTrack = new RacingTrack();
+    private RacingTrack racingTrack = GameFactory.racingTrack();
     private Round round;
 
     public void playRacing() {
