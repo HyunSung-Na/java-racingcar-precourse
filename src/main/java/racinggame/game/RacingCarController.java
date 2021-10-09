@@ -21,7 +21,7 @@ public class RacingCarController {
 
     private void readyStartRacing() {
         System.out.println(CAR_NAME_INPUT_MESSAGE);
-        while (userInputCarName()) {
+        while (!userInputCarName()) {
             System.out.println(CAR_NAME_INPUT_MESSAGE);
         }
     }
@@ -38,14 +38,14 @@ public class RacingCarController {
 
     private void inputRoundNumber() {
         System.out.println(PLAY_ROUND_USER_INPUT_MESSAGE);
-        String userInputRound = Console.readLine();
-        while (setRoundNumber(userInputRound)) {
+        while (!setRoundNumber()) {
             System.out.println(PLAY_ROUND_USER_INPUT_MESSAGE);
         }
     }
 
-    private boolean setRoundNumber(String userInputRound) {
+    private boolean setRoundNumber() {
         try {
+            String userInputRound = Console.readLine();
             int number = Integer.parseInt(userInputRound);
             round = new Round(number);
             return true;
