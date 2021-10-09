@@ -41,6 +41,7 @@ public class RacingCarController {
         while (!setRoundNumber()) {
             System.out.println(PLAY_ROUND_USER_INPUT_MESSAGE);
         }
+        System.out.println();
     }
 
     private boolean setRoundNumber() {
