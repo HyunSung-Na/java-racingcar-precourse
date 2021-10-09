@@ -10,6 +10,10 @@ public class GameFactory {
         return new RacingTrack();
     }
 
+    public static RacingResultView racingResultView() {
+        return new RacingResultView();
+    }
+
     public static RacingCarController racingCarController() {
         return new RacingCarController();
     }
