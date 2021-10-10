@@ -29,9 +29,19 @@ public class Cars {
     }
 
     public int findMaxDistance() {
-        return this.cars.stream()
-                .mapToInt(Car::getDistance)
-                .max()
-                .getAsInt();
+        int maxDistance = 0;
+
+        for (Car car : this.cars) {
+            maxDistance = checkMaxDistance(car.getDistance(), maxDistance);
+        }
+
+        return maxDistance;
+    }
+
+    private int checkMaxDistance(int carDistance, int maxDistance) {
+        if (carDistance > maxDistance) {
+            return carDistance;
+        }
+        return maxDistance;
     }
 }
