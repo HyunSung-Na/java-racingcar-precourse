@@ -1,15 +1,15 @@
 package racinggame.game.domain;
 
-import racinggame.game.GameFactory;
 import racinggame.game.RaceCondition;
 
 public class Car {
 
     private final Name name;
     private final Distance distance = new Distance();
-    private final RaceCondition raceCondition = GameFactory.raceCondition();
+    private final RaceCondition raceCondition;
 
-    public Car(Name name) {
+    public Car(Name name, RaceCondition raceCondition) {
+        this.raceCondition = raceCondition;
         this.name = name;
     }
 
