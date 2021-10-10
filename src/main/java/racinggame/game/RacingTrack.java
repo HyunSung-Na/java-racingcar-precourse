@@ -24,7 +24,8 @@ public class RacingTrack {
 
     private void validateUserCarNameInput(String[] splitUserInput) {
         if (splitUserInput.length < MIN_CAR_LENGTH) {
-            throw new IllegalArgumentException(WRONG_INPUT_CAR_NAME_LENGTH_MESSAGE);
+            System.out.println(WRONG_INPUT_CAR_NAME_LENGTH_MESSAGE);
+            throw new IllegalArgumentException();
         }
     }
 

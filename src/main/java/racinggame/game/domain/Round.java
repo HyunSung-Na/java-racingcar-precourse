@@ -14,7 +14,8 @@ public class Round {
 
     private void validateRound(int round) {
         if (round < MIN_ROUND_NUMBER) {
-            throw new IllegalArgumentException(WRONG_INPUT_MIN_ROUND_MESSAGE);
+            System.out.println(WRONG_INPUT_MIN_ROUND_MESSAGE);
+            throw new IllegalArgumentException();
         }
     }
 
