@@ -19,13 +19,13 @@ public class RacingResultView {
     }
 
     public void gameRoundResultMessage(List<Car> cars) {
-        cars.forEach( car -> {
-                    outPutMessage.append(car.getName());
-                    outPutMessage.append(ROUND_RESULT_MID_MESSAGE);
-                    appendCarMoveResult(car.getDistance());
-                    System.out.println(outPutMessage);
-                    outPutMessage.delete(0, outPutMessage.length());
-                });
+        cars.forEach(car -> {
+            outPutMessage.append(car.getName());
+            outPutMessage.append(ROUND_RESULT_MID_MESSAGE);
+            appendCarMoveResult(car.getDistance());
+            System.out.println(outPutMessage);
+            outPutMessage.delete(0, outPutMessage.length());
+        });
     }
 
     private void appendCarMoveResult(int distance) {
